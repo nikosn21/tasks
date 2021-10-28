@@ -1,0 +1,23 @@
+using System;
+
+namespace cycle_for
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("p = ");
+            ulong p = Convert.ToUInt32(Console.ReadLine());
+            ulong f = 1;
+            ulong i = 1;
+            do
+            {
+                f = f * i;
+                i++;
+            }
+            while (i <= p);
+            Console.WriteLine("Факториал {0} равен {1}", p, f);
+            Console.ReadLine();
+        }
+    }
+}
