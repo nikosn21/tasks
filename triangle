@@ -1,0 +1,22 @@
+using System;
+
+namespace triangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int m = Convert.ToInt32(Console.ReadLine());
+            string st = "";
+            string stc = "**";
+            for (int i = 1; i < m; i++)
+            {
+                st = st + " ";
+                stc = stc + "*";
+                Console.WriteLine("*"+st+"*");
+            }
+            Console.WriteLine(stc);
+            Console.ReadLine();
+        }
+    }
+}
