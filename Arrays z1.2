@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace test
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Введите длину массива");
+			var n = Convert.ToInt32(Console.ReadLine());
+			var array = new float[n];
+			Console.WriteLine("Введите элементы массива через Enter");
+			float sum = 0;
+			for (int i = 0; i < n; i++)
+            {
+				array[i] = Convert.ToInt32(Console.ReadLine());
+				sum += array[i];
+            }
+			float sredarifm = sum / n;
+			for (int i = 0; i < n; i++)
+            {
+				if (array[i] == 0)
+                {
+					array[i] = sredarifm;
+                }
+            }
+			for (int i = 0; i < n; i++)
+            {
+				Console.WriteLine($"{i}-й элемент массива = {array[i]}");
+            }
+			Console.ReadLine();
+		}
+	}
+}
