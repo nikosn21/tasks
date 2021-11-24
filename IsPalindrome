@@ -1,0 +1,27 @@
+using System;
+
+namespace Palindrome
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите строку: ");
+            string s = Console.ReadLine();
+            string rev_s = "";
+            int n = s.Length - 1;
+            for (int i = 0; i <= n; i++)
+            {
+                rev_s += s[n - i];
+            }
+            if (s == rev_s)
+            {
+                Console.WriteLine("Строка является палиндромом");
+            }
+            else
+            {
+                Console.WriteLine("Строка не является палиндромом");
+            }
+        }
+    }
+}
