@@ -1,0 +1,20 @@
+using System;
+
+namespace ReverseString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите строку: ");
+            string s = Console.ReadLine();
+            int n = s.Length - 1;
+            string new_s = "";
+            for (int i = 0; i <= n; i++)
+            {
+                new_s += s[n - i];
+            }
+            Console.WriteLine($"Реверсивная строка: {new_s}");
+        }
+    }
+}
